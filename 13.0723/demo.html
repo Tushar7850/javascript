@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+  
+    
+  </style>
+
+  <body>
+    <button  onclick="tu()">click</button>
+    
+
+   
+
+
+    <form  id="form1" style="display: none;">
+        Name : <input type="text" /> <br /><br />
+      Address : <input type="text" /> <br /><br />
+      City : <input type="text" /> <br /><br />
+
+      
+    </form>
+
+    
+
+
+
+
+    <script>
+    function tu(){
+
+      let t=document.getElementById("form1").style.display=="block" ;
+
+      if(t){
+        document.getElementById("form1").style.display="none"
+        
+      }
+      else{
+        document.getElementById("form1").style.display="block"
+       
+        
+      }
+    }
+
+
+  
+
+
+     
+
+
+
+     
+    </script>
+  </body>
+</html>

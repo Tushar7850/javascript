@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1">
+        <input type="text" id="name1">
+        <input type="password" id="pass1">
+        <button type="button" onclick="abc()" id="btn">click</button>
+    </form>
+    
+    <script>
+        function abc(){
+           let Uname=  document.getElementById("name1").value ;
+           let Upass= document.getElementById("pass1").value ;
+
+            if( Uname == "MV" && Upass == "9514"   ) {
+                document.getElementById("btn").innerHTML ="correct" ;
+                document.getElementById("btn").style.color ="green" ;
+            }
+
+            else{
+                document.getElementById("btn").innerHTML ="incorrect" ;
+                document.getElementById("btn").style.color ="red" ;
+
+            }
+
+            
+
+        }
+    </script>
+</body>
+</html>

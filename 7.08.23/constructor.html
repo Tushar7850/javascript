@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="button"  onclick="abc()">click</button>
+  <h1 id="p1"></h1>
+
+    <script>
+
+        class Cards{
+            constructor(){
+                this.name1 ="Tushar" 
+                this.name2="Swaraj" 
+                this.name3="Vishal"
+                this.name4="Jafar"
+                this.name5="Prem"
+                this.name6 ="Mayank"
+            }
+        }
+
+        function abc(){
+        const names = new Cards() ;
+        // document.write(names.name1 + "</br>"+ names.name2 + "</br>" + names.name3 + "</br>" +names.name4 + "</br>" +names.name5 + "</br>" +names.name6 )
+       document.getElementById("p1").innerHTML = (names.name1 + "</br>"+ names.name2 + "</br>" + names.name3 + "</br>" +names.name4 + "</br>" +names.name5 + "</br>" +names.name6 )
+    }
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

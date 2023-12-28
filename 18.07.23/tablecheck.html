@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #active {
+        color: red;
+    }
+    
+    #parent {
+        display: none;
+    }
+</style>
+
+<body>
+    <input type="submit" name="" id="main1">
+    <input type="checkbox" name="" id="main">
+    <table id="parent" border="">
+        <tr>
+            <th>Check</th>
+            <th>No</th>
+            <th>Remark</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>01</td>
+            <td><input type="text" placeholder="Enter a Reamark" name="" id="inputbox" disabled></td>
+            <td><input type="submit" id="active" value="Active"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="checkbox"></td>
+            <td>02</td>
+            <td><input type="text" placeholder="Enter a Reamark" name="" id="inputbox" disabled></td>
+            <td><input type="submit" id="active" value="Active"></td>
+        </tr>
+
+    </table>
+    <script>
+        const main = document.getElementById('main')
+        const parent = document.getElementById('parent')
+        const check = document.getElementById('checkbox');
+        const inputbox = document.getElementById('inputbox');
+        check.addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('active').style.color = 'black'
+                inputbox.disabled = false;
+            } else {
+                document.getElementById('active').style.color = 'red'
+                inputbox.disabled = true;
+            }
+        })
+        main.addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('parent').style.display = 'flex'
+            } else {
+                document.getElementById('parent').style.display = 'none'
+
+            }
+        })
+    </script>
+</body>
+
+</html>

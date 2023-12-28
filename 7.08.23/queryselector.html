@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 09.08.23 -->
+<!-- 
+
+    <select  id="item">
+        <option value=""  hidden>select item</option>
+        <option value="laptop">laptop</option>
+        <option value="mobile">mobile</option>
+        <option value="computer">computer</option>
+        <option value="spekers">spekers</option>
+    </select>
+    <p id="show"></p>
+
+    <script>
+        var source = document.querySelector('#item') ;
+        var target = document.querySelector('#show') ;
+
+        source.addEventListener('change',function(){
+            target.textContent = this.value
+        })
+
+    </script> -->
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="age" placeholder="Enter age">
+    <input type="text" id="city" placeholder="Enter city">
+
+   
+ 
+
+
+
+    <hr><hr>
+
+    <select  id="item">
+        <option value="" hidden>select item</option>
+        <option value="laptop">laptop</option>
+        <option value="mobile">mobile</option>
+        <option value="computer">computer</option>
+        <option value="spekers">spekers</option>
+    </select>
+
+
+    <select  id="remark">
+        <option value="" hidden>remark</option>
+        <option value="Good">Good</option>
+        <option value="very Good">very Good</option>
+        <option value="Bad">Bad</option>
+        <option value="Very Bad">very bad</option>
+    </select>
+
+    <select id="subject">
+        <option value="" hidden>subject</option>
+        <option  value="123">123</option>
+        <option value="456">456</option>
+        <option value="789">789</option>
+        <option value="147">147</option>
+    </select>
+
+    <button type="button" onclick="adddata()">ADD Data..</button>
+
+
+    <table id="mytable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>item</th>
+            <th>remark</th>
+            <th>subject</th>
+        </tr>
+    </table>
+
+    <script>
+        function adddata(){
+            var names =document.getElementById('name').value;
+            var ages =document.getElementById('age').value;
+            var citys =document.getElementById('city').value;
+         var items =document.getElementById('item').value;
+        var remarks = document.getElementById('remark').value ;
+        var subjects = document.getElementById('subject').value;
+        
+
+
+
+        var table = document.getElementById('mytable') ;
+
+        var row = table.insertRow(table.rows.length) ;
+
+        var cell1 =row.insertCell(0) ;
+        cell1.innerHTML = names ;
+
+        var cell2 =row.insertCell(1) ;
+        cell2.innerHTML = ages ;
+
+        var cell3 =row.insertCell(2) ;
+        cell3.innerHTML = citys ;
+
+        var cell4 =row.insertCell(3) ;
+        cell4.innerHTML = items ;
+
+        var cell5 =row.insertCell(4) ;
+        cell5.innerHTML = remarks ;
+
+        var cell6 =row.insertCell(5) ;
+        cell6.innerHTML = subjects ;
+
+        }
+
+        
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+  
+</body>
+</html>

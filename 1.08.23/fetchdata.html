@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="getdata()">show</button>
+    <select  id="user-list" style="display: none;"></select>
+
+
+
+    <script>
+        function getdata(){
+            let fechdata = fetch("https://jsonplaceholder.typicode.com/users")
+            .then ((Response)=>{
+                let data =Response.json() ;
+                return data ;
+            })
+
+            .then ((users) => {
+                document.getElementById("user-list").style.display = "block" ;
+                for (let i = 0 ; i<users.length ; i++){
+                    let option =document.createElement("option")
+                    option.setAttribute("value",users[i].id) ;
+
+                    let name =document.createTextNode(users[i].name)
+                    option.appendChild(name) ;
+
+                    document.getElementById("user-list").appendChild(option) ;
+                }
+            })
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+    
+
+
+
+
+<!-- 
+    //  let fetchData =fetch('https://api.openaq.org/v1/cities?country=US&state=${stateName}')
+    //  console.log(fetchData)
+    //   .then ((xyz)=>{
+    //     console.log(xyz) ;
+    //     let data =xyz.json () ;
+    //     console.log (data) ;
+    //     return data ;
+
+    //   })
+    //   .then ((result)=>{
+    //     console.log(result) ;
+
+    //   }) ;
+
+    //   console.log(fetchData)
+ -->
+
+
+
+</body>
+</html>
